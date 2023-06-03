@@ -1,0 +1,101 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(center, space-between, column, calc($size-xl * 2));
+  @include size(100%, 100%);
+  padding: $size-xl;
+  transition: transform $transition-normal, opacity $transition-fast;
+
+  &--open {
+    opacity: 1;
+    transition-delay: $transition-fast, $transition-fast;
+  }
+
+  &--closed {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  span {
+    color: $color-gray-dark;
+    transition: opacity $transition-long;
+  }
+}
+
+.header {
+  @include flex(start, center, column, $size-md);
+  @include size(100%, auto);
+
+  span {
+    width: 80%;
+  }
+}
+
+.header-profile {
+  @include flex(start, start, row, $size-md);
+}
+
+.header-img {
+  width: 40%;
+  position: relative;
+
+  &::after {
+    @include overlay();
+  }
+}
+
+.header-icons {
+  flex: 1;
+}
+
+.projects-scratch {
+  transform: translate(-50%, -50%);
+}
+
+.projects {
+  @include flex(start, start);
+  @include size(100%, 100%);
+  flex: 1;
+  position: relative;
+}
+
+.projects-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.projects-scratch {
+  transform: translate(-50%, -50%);
+}
+
+.contacts {
+  @include flex(center, space-between);
+  @include size(100%, auto);
+  padding: $size-xl;
+  position: relative;
+}
+
+.contacts-scratch {
+  transform: translateY(-50%);
+}
+
+.email {
+  @include font($font-style-primary, $font-size-md);
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+@include media("2col-lg") {
+  .contacts {
+    padding: $size-xl;
+  }
+
+  .email {
+    @include font($font-style-secondary, $font-size-sm);
+    color: $color-gray-dark;
+  }
+}

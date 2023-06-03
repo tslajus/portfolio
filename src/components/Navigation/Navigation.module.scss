@@ -1,0 +1,86 @@
+@import "@/index.scss";
+
+.navigation {
+  @include flex();
+  @include size(100%, auto);
+
+  &--reversed {
+    flex-direction: row-reverse;
+  }
+
+  li {
+    @include flex(center, start, row, $size-xl);
+  }
+}
+
+.links-container,
+.links,
+.arrows {
+  @include flex(null, null, column, $size-sm);
+  flex: 1;
+}
+
+.links-container {
+  &--reversed {
+    @include align(end, end);
+  }
+}
+
+.links {
+  @include size(auto, 100%);
+  z-index: $z-index-top;
+
+  &--reversed {
+    align-items: end;
+  }
+
+  &--start {
+    justify-content: start;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--end {
+    justify-content: end;
+  }
+}
+
+.arrows {
+  @include align(end, start);
+
+  &--reversed {
+    align-items: start;
+  }
+
+  &--start {
+    justify-content: start;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--end {
+    justify-content: end;
+  }
+}
+
+.btn,
+.arrow-btn {
+  &.hover {
+    color: $color-primary;
+  }
+}
+
+.arrow-btn--reversed {
+  transform: rotate(180deg);
+}
+
+.single-tile {
+  @include flex();
+}
+.gap {
+  flex: 1;
+}

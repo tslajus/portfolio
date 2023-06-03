@@ -1,0 +1,12 @@
+@import "@/index.scss";
+
+.scratch {
+  position: absolute;
+  z-index: $z-index-negative;
+
+  svg {
+    path {
+      stroke: $color-white;
+    }
+  }
+}

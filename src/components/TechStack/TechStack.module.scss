@@ -1,0 +1,66 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(start, space-between, column, $size-md);
+  aspect-ratio: 1;
+
+  p {
+    z-index: $z-index-top;
+  }
+}
+
+.icon {
+  &:hover {
+    svg {
+      color: $color-primary;
+    }
+  }
+
+  svg {
+    @include size($size-icon, $size-icon);
+    color: $color-gray-normal;
+    transition: color $transition-fast;
+  }
+}
+
+.text,
+.items {
+  @include size(100%, 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: $size-md;
+}
+
+.text {
+  @include flex(center, space-between);
+  flex: 1;
+
+  h2 {
+    transform: translateY(-100%);
+  }
+}
+
+@include media("1col-lg") {
+  .text,
+  .items {
+    padding: $size-xl;
+  }
+
+  .text {
+    @include flex(start, space-between);
+    top: $size-xl;
+  }
+}
+
+@include media("1col-xs") {
+  .text,
+  .items {
+    padding: $size-md;
+  }
+
+  .text {
+    @include flex(start, space-between);
+    top: $size-xl;
+  }
+}

@@ -1,0 +1,59 @@
+@import "@/index.scss";
+
+.icon-link,
+.icon-static {
+  z-index: $z-index-top;
+
+  svg {
+    @include size($size-icon, $size-icon);
+    @include flex(center, center);
+    display: inline-block;
+  }
+}
+
+.icon-link {
+  color: $color-white;
+  position: relative;
+  transition: color $transition-fast;
+  &:hover {
+    color: $color-gray-dark;
+  }
+}
+
+.icon-static {
+  color: $color-gray-dark;
+  position: relative;
+}
+
+.icon-static:hover .name,
+.icon-link:hover .name {
+  display: block;
+}
+
+.external-link {
+  svg {
+    @include size($size-icon-lg, $size-icon-lg);
+  }
+}
+
+.name {
+  @include size(fit-content, auto);
+  display: none;
+  background-color: $color-white;
+  color: $color-primary;
+  padding: 0 $size-xs;
+  white-space: nowrap;
+  position: absolute;
+  top: -3.2rem;
+  left: 0;
+  z-index: $z-index-top;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.side {
+  top: 0;
+  left: 3rem;
+}

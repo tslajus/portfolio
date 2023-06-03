@@ -1,0 +1,30 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(center, center, column);
+  @include size(100%, 100%);
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.email {
+  @include font($font-style-primary, $font-size-md);
+  color: $color-primary;
+  z-index: $z-index-top;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-white;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 75%;
+  left: 65%;
+  color: $color-gray-normal;
+
+  &:hover {
+    color: $color-white;
+  }
+}

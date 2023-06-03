@@ -1,0 +1,225 @@
+@import "@/index.scss";
+
+.navigation {
+  @include grid-position(1, 1, 1, 2);
+}
+.movies-heading {
+  @include grid-position(1, 1, 4, 1);
+  h2 {
+    display: none;
+  }
+}
+.movies-preview {
+  @include grid-position(2, 1, 2, 2);
+}
+
+.movies-info {
+  @include grid-position(2, 1, 4, 1);
+}
+
+.haiku-heading {
+  @include grid-position(4, 1, 2, 1);
+  text-align: end;
+}
+
+.haiku-preview {
+  @include grid-position(4, 2, 3, 1);
+}
+
+.haiku-info {
+  @include grid-position(5, 1, 2, 1);
+}
+
+.qualitrim-heading {
+  @include grid-position(6, 1, 1, 1);
+}
+
+.qualitrim-preview {
+  @include grid-position(7, 1, 2, 2);
+}
+
+.qualitrim-info {
+  @include grid-position(7, 1, 1, 1);
+}
+
+@include media("4col-md") {
+  .movies-heading {
+    h2 {
+      display: block;
+    }
+  }
+}
+
+@include media("3col-lg") {
+  .navigation {
+    @include grid-position(1, 1, 1, 2);
+  }
+
+  .movies-heading {
+    @include grid-position(1, 1, 3, 1);
+    aspect-ratio: 1;
+    h2 {
+      display: none;
+    }
+  }
+
+  .movies-preview {
+    @include grid-position(2, 1, 1, 2);
+  }
+
+  .movies-info {
+    @include grid-position(2, 1, 3, 1);
+  }
+
+  .haiku-heading {
+    @include grid-position(4, 1, 1, 1);
+  }
+
+  .haiku-preview {
+    @include grid-position(4, 2, 2, 1);
+  }
+
+  .haiku-info {
+    @include grid-position(5, 1, 1, 1);
+  }
+
+  .qualitrim-heading {
+    @include grid-position(6, 1, 1, 1);
+  }
+
+  .qualitrim-preview {
+    @include grid-position(7, 1, 2, 2);
+  }
+
+  .qualitrim-info {
+    @include grid-position(7, 1, 1, 1);
+  }
+}
+
+@include media("3col-md") {
+  .movies-heading {
+    h2 {
+      display: block;
+    }
+  }
+}
+
+@include media("2col-lg") {
+  .heading {
+    @include grid-position(1, 1, 1, 2);
+
+    &--big {
+      font-size: calc(19vw + 1rem);
+    }
+  }
+
+  .movies-preview {
+    @include grid-position(3, 1, 1, 1);
+    aspect-ratio: 1;
+  }
+  .movies-heading {
+    @include grid-position(2, 1, 2, 1);
+  }
+
+  .movies-info {
+    @include grid-position(3, 1, 2, 1);
+  }
+
+  .haiku-heading {
+    @include grid-position(4, 1, 1, 1);
+  }
+
+  .haiku-info {
+    @include grid-position(5, 1, 1, 1);
+  }
+
+  .haiku-preview {
+    @include grid-position(5, 1, 2, 1);
+    aspect-ratio: 1;
+  }
+
+  .qualitrim-preview {
+    @include grid-position(7, 1, 1, 1);
+    aspect-ratio: 1;
+  }
+
+  .qualitrim-heading {
+    @include grid-position(6, 1, 2, 1);
+  }
+
+  .qualitrim-info {
+    @include grid-position(7, 1, 2, 1);
+  }
+}
+
+@include media("1col-lg") {
+  .heading {
+    @include grid-position(1, 1, 1, 1);
+
+    &--big {
+      font-size: calc(19vw + 1rem);
+    }
+  }
+
+  .movies-heading {
+    @include grid-position(2, 1, 1, 1);
+    padding: $size-xl;
+  }
+
+  .movies-preview {
+    @include grid-position(3, 1, 1, 1);
+  }
+
+  .movies-info {
+    @include grid-position(4, 1, 1, 1);
+  }
+
+  .haiku-heading {
+    @include grid-position(5, 1, 1, 1);
+    padding: $size-xl;
+    h2 {
+      text-align: start;
+    }
+  }
+
+  .haiku-preview {
+    @include grid-position(6, 1, 1, 1);
+  }
+
+  .haiku-info {
+    @include grid-position(7, 1, 1, 1);
+  }
+
+  .qualitrim-heading {
+    @include grid-position(8, 1, 1, 1);
+    padding: $size-xl;
+  }
+
+  .qualitrim-preview {
+    @include grid-position(9, 1, 1, 1);
+  }
+
+  .qualitrim-info {
+    @include grid-position(10, 1, 1, 1);
+  }
+}
+
+@include media("1col-xs") {
+  .movies-heading {
+    padding: $size-md;
+  }
+
+  .haiku-heading {
+    padding: $size-md;
+  }
+
+  .qualitrim-heading {
+    padding: $size-md;
+  }
+}
+
+@include media("1col-xs") {
+  .heading--big {
+    font-size: calc(17vw + 1rem);
+  }
+}

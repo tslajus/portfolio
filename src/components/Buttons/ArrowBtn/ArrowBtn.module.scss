@@ -1,0 +1,41 @@
+@import "@/index.scss";
+
+.btn {
+  @include size(auto, $font-size-lg);
+  padding: 0;
+  color: inherit;
+  z-index: $z-index-top;
+  transition: transform $transition-normal;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &--up {
+    transform: rotate(90deg);
+  }
+
+  &--down {
+    transform: rotate(-90deg);
+  }
+
+  &--current {
+    color: $color-primary;
+  }
+
+  &--reversed {
+    transform: rotate(-180deg);
+  }
+
+  svg {
+    @include size($font-size-lg, $font-size-lg);
+  }
+}
+
+@include media("1col-sm") {
+  .btn {
+    svg {
+      @include size($font-size-md, $font-size-md);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "@/index.scss";
+
+.wrapper {
+  @include flex(null, null, column);
+  @include size(100%, auto);
+  border-left: $border;
+  margin-left: $size-sidebar;
+  overflow-x: hidden;
+}
+
+@include media("2col-md") {
+  .wrapper {
+    margin-left: $size-sidebar-md;
+  }
+}
+
+@include media("1col-sm") {
+  .wrapper {
+    margin-left: $size-sidebar-sm;
+  }
+}

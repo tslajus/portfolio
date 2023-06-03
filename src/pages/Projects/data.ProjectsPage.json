@@ -1,0 +1,175 @@
+{
+  "totalGrids": 32,
+  "totalGridsMd": 24,
+  "totalGridsSm": 14,
+  "totalGridsXs": 10,
+
+  "links": [
+    { "title": "Projects", "direction": "current", "id": "projects-page" }
+  ],
+
+  "heading": "Projects",
+  "headingBig": "Portfolio",
+
+  "projects": [
+    {
+      "title": "My Movies App",
+      "description": "A full-stack app offering movie search functionality, comprehensive movie info, and favorites storage. ",
+      "descriptionShort": "Car rental website is a platform that allows users to rent cars for personal or business use.",
+      "links": [
+        {
+          "icon": "github",
+          "linkUrl": "https://github.com/tslajus/movies-app_frontend",
+          "linkComment": "front-end"
+        },
+        {
+          "icon": "github",
+          "linkUrl": "https://github.com/tslajus/movies-app_backend",
+          "linkComment": "back-end"
+        },
+        { "icon": "preview", "linkUrl": "https://my-movies-app.onrender.com/" }
+      ],
+      "icons": ["react", "ts", "sass", "mongo", "node"],
+
+      "scratch": [
+        {
+          "variation": 3,
+          "position": {
+            "top": "-12rem",
+            "right": "-15rem",
+            "width": "380%",
+            "height": "380%"
+          }
+        }
+      ],
+      "scratch1Col": [
+        {
+          "variation": 9,
+          "position": {
+            "top": "-60rem",
+            "left": "-5rem",
+            "width": "90%",
+            "height": "90%"
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Qualitrim",
+      "description": "A stylish and functional landing page conveying the unique atmosphere of a barber shop. ",
+      "descriptionShort": "Car rental website is a platform that allows users to rent cars for personal or business use.",
+      "links": [
+        {
+          "icon": "github",
+          "linkUrl": "https://github.com/tslajus/qualitrim"
+        },
+        { "icon": "preview", "linkUrl": "https://qualitrim.netlify.app/" }
+      ],
+      "icons": ["react", "ts", "sass"],
+      "scratch": [
+        {
+          "variation": 5,
+          "position": {
+            "top": "-15rem",
+            "left": "6rem",
+            "width": "340%",
+            "height": "340%"
+          }
+        }
+      ],
+      "scratch2Col": [
+        {
+          "variation": 5,
+          "position": {
+            "top": "-15rem",
+            "left": "-50rem",
+            "width": "340%",
+            "height": "340%"
+          }
+        }
+      ],
+      "scratch1Col": [
+        {
+          "variation": 12,
+          "position": {
+            "top": "-60rem",
+            "left": "-10rem",
+            "width": "340%",
+            "height": "340%"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Word Guessing Haiku",
+      "description": "An engaging AI-powered word guessing game, delivering clues in the form of unique haiku. ",
+      "descriptionShort": "Car rental website is a platform that allows users to rent cars for personal or business use.",
+      "links": [
+        {
+          "icon": "github",
+          "linkUrl": "https://github.com/tslajus/word_guess_ai"
+        },
+        {
+          "icon": "preview",
+          "linkUrl": "https://word-guessing-haiku.onrender.com/"
+        }
+      ],
+      "icons": ["react", "ts", "sass", "openai"],
+
+      "scratch": [
+        {
+          "variation": 4,
+          "position": {
+            "bottom": "-60%",
+            "left": "-10rem",
+            "width": "300%",
+            "height": "300%"
+          }
+        }
+      ],
+
+      "scratch2Col": [
+        {
+          "variation": 10,
+          "position": {
+            "top": "-8rem",
+            "left": "-15rem",
+            "width": "300%",
+            "height": "300%"
+          }
+        },
+        {
+          "variation": 11,
+          "position": {
+            "top": "80%",
+            "left": "-5rem",
+            "width": "300%",
+            "height": "300%"
+          }
+        }
+      ],
+
+      "scratch1Col": [
+        {
+          "variation": 10,
+          "position": {
+            "top": "-120%",
+            "left": "-15rem",
+            "width": "300%",
+            "height": "300%"
+          }
+        },
+        {
+          "variation": 11,
+          "position": {
+            "top": "80%",
+            "left": "-5rem",
+            "width": "300%",
+            "height": "300%"
+          }
+        }
+      ]
+    }
+  ]
+}

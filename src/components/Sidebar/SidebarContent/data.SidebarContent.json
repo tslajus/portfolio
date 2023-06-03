@@ -1,0 +1,32 @@
+{
+  "headerLinks": [
+    { "icon": "linkedin", "linkUrl": "https://www.linkedin.com/in/tslajus/" },
+    { "icon": "github", "linkUrl": "https://github.com/tslajus" }
+  ],
+
+  "headerText": "Hello, I'm Tadas, an aspiring front-end dev based in Kaunas, Lithuania.",
+
+  "projectsText": "Take a look at my work:",
+  "projectsLink": "Projects",
+  "projectsScratch": {
+    "variation": 13,
+    "position": {
+      "top": "50%",
+      "left": "50%",
+      "width": "fit-content",
+      "height": "fit-content"
+    }
+  },
+
+  "contactsText": "Let's talk:",
+  "email": "tadas@slajus.dev",
+  "contactsScratch": {
+    "variation": 14,
+    "position": {
+      "top": "50%",
+      "right": "0",
+      "width": "fit-content",
+      "height": "fit-content"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "totalGrids": 4,
+  "totalGridsMd": 3,
+  "totalGridsSm": 4,
+  "totalGridsXs": 2,
+
+  "links": [
+    { "title": "Home", "direction": "up", "id": "home-page" },
+    { "title": "About", "direction": "up", "id": "about-page" },
+    { "title": "Projects", "direction": "up", "id": "projects-page" },
+    { "title": "Contacts", "direction": "current", "id": "contact-page" }
+  ],
+
+  "heading": "Contact me",
+  "headingBig": "Let's talk",
+
+  "email": "tadas@slajus.dev",
+
+  "redirect": {
+    "icon": "linkedin",
+    "linkUrl": "https://www.linkedin.com/in/tslajus/"
+  },
+
+  "scratches": [
+    {
+      "variation": 6,
+      "position": {
+        "right": "25%",
+        "top": "30%",
+        "width": "50%",
+        "height": "50%"
+      }
+    },
+    {
+      "variation": 7,
+      "position": {
+        "right": "2rem",
+        "bottom": "1rem",
+        "width": "40%",
+        "height": "40%"
+      }
+    }
+  ]
+}

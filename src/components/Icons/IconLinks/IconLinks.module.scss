@@ -1,0 +1,23 @@
+@import "@/index.scss";
+
+.icon-box {
+  @include flex(center, center, row, $size-sm);
+  @include size(100%, auto);
+}
+
+.start {
+  justify-content: start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.end {
+  justify-content: end;
+}
+
+.column {
+  @include flex(start, start, column, $size-sm);
+  height: fit-content;
+}

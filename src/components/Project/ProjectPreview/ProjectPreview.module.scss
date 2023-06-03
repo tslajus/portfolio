@@ -1,0 +1,71 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(start);
+  @include size(100%, 100%);
+  cursor: pointer;
+  overflow-y: hidden;
+  position: relative;
+  filter: grayscale(100%);
+
+  .static-img {
+    opacity: 1;
+    transition: opacity $transition-long;
+    transition-delay: $transition-normal;
+  }
+
+  .hover-img {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity $transition-long;
+    transition-delay: $transition-normal;
+  }
+
+  &:hover {
+    .staticImg {
+      opacity: 0;
+      transition-delay: 1s;
+    }
+
+    .hover-img {
+      opacity: 1;
+      transition-delay: 1s;
+    }
+
+    .hover-border {
+      display: block;
+    }
+  }
+
+  &::after {
+    @include overlay();
+  }
+
+  &:hover {
+    filter: grayscale(0);
+    transition: filter $transition-normal ease-in-out;
+
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  &--horizontal {
+    aspect-ratio: 2/1;
+  }
+
+  &--vertical {
+    aspect-ratio: 1/2;
+  }
+}
+
+.hover-border {
+  @include size(100%, 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: $border;
+  display: none;
+  z-index: $z-index-top;
+}

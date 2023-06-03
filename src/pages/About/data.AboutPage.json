@@ -1,0 +1,42 @@
+{
+  "totalGrids": 8,
+  "totalGridsMd": 6,
+  "totalGridsSm": 4,
+  "totalGridsXs": 2,
+
+  "links": [
+    { "title": "Home", "direction": "up", "id": "home-page" },
+    { "title": "About", "direction": "current", "id": "about-page" },
+    { "title": "Projects", "direction": "down", "id": "projects-page" },
+    { "title": "Contact", "direction": "down", "id": "contact-page" }
+  ],
+
+  "heading": "About me",
+
+  "text": "As a junior front-end developer, I merge a valuable blend of skills from my background in visual arts with my growing competence in HTML, CSS, JavaScript, TypeScript, React, and SCSS. My approach to coding is meticulous, focusing on writing clean and optimized code, a skill that is constantly being refined. With a thirst for learning, I apply creativity to overcome front-end challenges. ",
+  "textShort": "As a junior front-end developer, I merge a valuable blend of skills from my background in visual arts with my growing competence in HTML, CSS, JavaScript, TypeScript, React, and SCSS. My approach to coding is meticulous, focusing on writing clean and optimized code.",
+
+  "scratch": [
+    {
+      "variation": 2,
+      "position": {
+        "top": "-9rem",
+        "left": "4rem",
+        "width": "135%",
+        "height": "135%"
+      }
+    }
+  ],
+
+  "scratchSmall": [
+    {
+      "variation": 2,
+      "position": {
+        "top": "5rem",
+        "left": "4rem",
+        "width": "135%",
+        "height": "135%"
+      }
+    }
+  ]
+}

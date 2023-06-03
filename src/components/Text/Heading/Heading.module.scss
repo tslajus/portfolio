@@ -1,0 +1,85 @@
+@import "@/index.scss";
+
+.heading {
+  @include font($font-style-primary, $font-size-lg);
+  display: flex;
+  flex: 1;
+  color: $color-primary;
+  z-index: $z-index-top;
+
+  &--small {
+    font-size: $font-size-md;
+  }
+  &--normal {
+    font-size: $font-size-lg;
+  }
+
+  &--big {
+    @include font($font-style-primary, calc(11vw));
+    color: $color-white;
+    line-height: 0.9;
+    user-select: none;
+    z-index: $z-index-middle;
+  }
+}
+
+.primary {
+  color: $color-primary;
+}
+
+.secondary {
+  color: $color-secondary;
+}
+
+.white {
+  color: $color-white;
+}
+
+.gray-light {
+  color: $color-gray-light;
+}
+
+.gray-normal {
+  color: $color-gray-normal;
+}
+
+.gray-light {
+  color: $color-gray-dark;
+}
+
+.start {
+  justify-content: start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.end {
+  justify-content: end;
+}
+
+@include media("3col-lg") {
+  .heading--big {
+    font-size: calc(13vw + 1rem);
+  }
+}
+
+@include media("2col-lg") {
+  .heading--big {
+    font-size: calc(16vw + 1rem);
+  }
+}
+
+@include media("1col-xs") {
+  .heading--big {
+    font-size: calc(16vw + 1rem);
+    transform: translateY(-10%);
+  }
+}
+
+@include media("1col-xxs") {
+  .heading--big {
+    transform: translateY(-15%);
+  }
+}

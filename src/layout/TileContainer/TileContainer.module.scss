@@ -1,0 +1,63 @@
+@import "@/index.scss";
+
+.container {
+  width: 100%;
+  border: $border;
+  position: relative;
+
+  &:hover .hover {
+    display: block;
+  }
+}
+
+.font {
+  &--white {
+    color: $color-white;
+  }
+
+  &--gray-light {
+    color: $color-gray-light;
+  }
+
+  &--gray-normal {
+    color: $color-gray-normal;
+  }
+
+  &--gray-dark {
+    color: $color-gray-dark;
+  }
+
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--secondary {
+    color: $color-primary;
+  }
+}
+
+.padding {
+  &--normal {
+    padding: $size-md;
+  }
+
+  &--big {
+    padding: $size-xl;
+  }
+
+  &--none {
+    padding: 0;
+  }
+}
+
+.square {
+  aspect-ratio: 1;
+}
+
+.column {
+  @include flex(null, null, column);
+}
+
+.hover {
+  @include hover-border();
+}

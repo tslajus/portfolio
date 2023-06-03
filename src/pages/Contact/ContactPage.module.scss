@@ -1,0 +1,47 @@
+@import "@/index.scss";
+
+.navigation {
+  @include grid-position(1, 1, 3, 2);
+}
+
+.contacts {
+  @include grid-position(1, 1, 2, 1);
+}
+
+@include media("3col-lg") {
+  .navigation {
+    @include grid-position(1, 1, 2, 2);
+  }
+
+  .contacts {
+    @include grid-position(1, 1, 1, 1);
+  }
+}
+
+@include media("2col-lg") {
+  .contacts {
+    @include grid-position(2, 1, 1, 1);
+  }
+
+  .heading {
+    @include grid-position(1, 1, 1, 2);
+
+    &--big {
+      width: 200%;
+      font-size: calc(20vw + 1rem);
+    }
+  }
+}
+
+@include media("1col-lg") {
+  .contacts {
+    @include grid-position(2, 1, 1, 1);
+  }
+  .heading {
+    @include grid-position(1, 1, 1, 1);
+
+    &--big {
+      font-size: calc(18vw + 1rem);
+    }
+  }
+}

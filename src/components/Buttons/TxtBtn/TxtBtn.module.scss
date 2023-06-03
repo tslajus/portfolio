@@ -1,0 +1,21 @@
+@import "@/index.scss";
+
+.btn {
+  @include size(auto, $font-size-lg);
+  @include font($font-style-primary, $font-size-lg);
+  line-height: 1;
+  padding: 0;
+  color: inherit;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  svg {
+    @include size($font-size-lg, $font-size-lg);
+  }
+
+  &--selected {
+    color: $color-primary;
+  }
+}

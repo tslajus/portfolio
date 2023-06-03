@@ -1,0 +1,79 @@
+//colors
+// $color-primary: #f15a25;
+$color-primary: #f15a25;
+$color-secondary: #aeb8d1;
+$color-white: #fff;
+$color-gray-light: #e3e3e3;
+$color-gray-normal: #a4a4a4;
+$color-gray-dark: #4f4f4f;
+
+//fonts
+$font-style-primary: "Staatliches", cursive;
+$font-style-secondary: "Space Mono", monospace;
+
+$font-size-sm: 1.5rem;
+$font-size-md: 3rem;
+$font-size-lg: 4.8rem;
+$font-size-mobile-sm: 1.8rem;
+
+//columns
+$column-count: 4;
+$column-count-md: 3;
+$column-count-sm: 2;
+$column-count-xs: 1;
+
+//sizes
+$size-xs: 0.5rem;
+$size-sm: 1rem;
+$size-md: 1.5rem;
+$size-lg: 2rem;
+$size-xl: 3rem;
+
+$size-sidebar: 9.5rem;
+$size-sidebar-md: 7rem;
+$size-sidebar-sm: 5rem;
+$size-border-line: 1px;
+$size-icon: 2.5rem;
+$size-icon-lg: 3rem;
+
+$tile-4col: calc((100% - $size-sidebar) / 4);
+$tile-3col: calc((100% - $size-sidebar) / 3);
+$tile-2col: calc((100% - $size-sidebar) / 2);
+$tile-2col-md: calc((100% - $size-sidebar-md) / 2);
+$tile-1col: calc(100% - $size-sidebar-md);
+$tile-1col-sm: calc(100% - $size-sidebar-sm);
+
+//borders
+$border: solid $size-border-line $color-white;
+$border-double: solid calc($size-border-line * 2) $color-white;
+
+//transitions
+$transition-fast: 0.2s;
+$transition-normal: 0.5s;
+$transition-long: 1.5s;
+
+//layers
+$z-index-sidebar: 100;
+$z-index-top: 10;
+$z-index-middle: 5;
+$z-index-negative: -1;
+$z-index-bottom: -5;
+
+//viewport sizes;
+$screen-4col-lg: 1919px;
+$screen-4col-md: 1699px;
+$screen-4col-sm: 1499px;
+
+$screen-3col-lg: 1399px;
+$screen-3col-md: 1299px;
+$screen-3col-sm: 1199px;
+
+$screen-2col-lg: 1079px;
+$screen-2col-md: 859px;
+$screen-2col-sm: 759px;
+
+$screen-1col-lg: 729px;
+$screen-1col-md: 619px;
+$screen-1col-sm: 539px;
+$screen-1col-xs: 479px;
+$screen-1col-xxs: 399px;

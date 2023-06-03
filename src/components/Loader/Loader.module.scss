@@ -1,0 +1,39 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(center, center);
+  @include size(100%, 100%);
+  background-color: $color-gray-normal;
+  display: flex;
+}
+
+.loader {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    letter-spacing: 0.1rem;
+    top: 0;
+    left: 100%;
+    margin-left: 0.1rem;
+    animation: dots 2s infinite;
+  }
+}
+
+@keyframes dots {
+  0%,
+  20% {
+    content: "";
+  }
+  40% {
+    content: ".";
+  }
+  60% {
+    content: "..";
+  }
+  80%,
+  100% {
+    content: "...";
+  }
+}

@@ -1,0 +1,49 @@
+@import "@/index.scss";
+
+.container:hover .hover-border {
+  display: block;
+}
+
+.img {
+  position: relative;
+  filter: grayscale(100%);
+  transition: all $transition-normal;
+
+  img {
+    display: block;
+    object-fit: cover;
+  }
+
+  &::after {
+    @include overlay();
+    transition: all $transition-normal;
+  }
+
+  &:hover {
+    filter: grayscale(0);
+
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+.img.no-hover {
+  &:hover {
+    filter: grayscale(100%);
+
+    &::after {
+      opacity: 0.5;
+    }
+  }
+}
+
+.hover-border {
+  @include size(100%, 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: $border;
+  display: none;
+  z-index: $z-index-top;
+}

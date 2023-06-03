@@ -1,0 +1,99 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(start, start, column);
+}
+
+.innerTile {
+  @include flex(start, start, column);
+  min-height: 85%;
+  width: 85%;
+  background-color: $color-secondary;
+  color: $color-gray-dark;
+}
+
+.heading {
+  margin-bottom: $size-md;
+}
+
+.padding {
+  padding: $size-md;
+}
+
+.bottom {
+  justify-content: end;
+}
+
+.justified {
+  justify-content: space-between;
+}
+
+.right {
+  align-items: end;
+}
+
+@include media("4col-lg") {
+  .innerTile {
+    @include size(90%, 90%);
+  }
+}
+
+@include media("4col-md") {
+  .innerTile {
+    @include size(100%, 100%);
+  }
+
+  .heading {
+    display: none;
+  }
+}
+
+@include media("4col-sm") {
+  .container {
+    padding: 0;
+  }
+}
+
+@include media("3col-lg") {
+  .innerTile {
+    @include size(90%, 90%);
+  }
+
+  .heading {
+    display: inline-block;
+  }
+}
+
+@include media("3col-md") {
+  .innerTile {
+    @include size(100%, 100%);
+  }
+
+  .heading {
+    display: none;
+  }
+}
+
+@include media("2col-lg") {
+  .innerTile {
+    @include size(85%, 85%);
+  }
+}
+
+@include media("2col-md") {
+  .innerTile {
+    @include size(100%, 100%);
+  }
+}
+
+@include media("1col-lg") {
+  .innerTile {
+    @include size(85%, 85%);
+  }
+}
+
+@include media("1col-sm") {
+  .innerTile {
+    @include size(100%, 100%);
+  }
+}

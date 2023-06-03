@@ -1,0 +1,23 @@
+@import "@/index.scss";
+
+.container {
+  @include grid($column-count, 1fr);
+}
+
+@include media("3col-lg") {
+  .container {
+    @include grid($column-count-md, 1fr);
+  }
+}
+
+@include media("2col-lg") {
+  .container {
+    @include grid($column-count-sm, 1fr);
+  }
+}
+
+@include media("1col-lg") {
+  .container {
+    @include grid($column-count-xs, 1fr);
+  }
+}

@@ -1,0 +1,138 @@
+@import "variables";
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($family: $font-style-secondary, $size: $font-size-sm) {
+  font-family: $family;
+  font-size: $size;
+}
+
+@mixin colors($bg: $color-gray, $font: $color-gray-dark) {
+  background-color: $bg;
+  color: $font;
+}
+
+@mixin align($align: normal, $justify: flex-start) {
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flex($align: normal, $justify: flex-start, $direction: row, $gap: 0) {
+  @include align($align, $justify);
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin grid(
+  $column-count: 1,
+  $column-size: 1fr,
+  $rows: auto,
+  $gap: 0,
+  $align: stretch,
+  $justify: start,
+  $align-content: stretch
+) {
+  display: grid;
+  grid-template-columns: repeat($column-count, $column-size);
+  grid-template-rows: $rows;
+  grid-gap: $gap;
+  align-items: $align;
+  justify-items: $justify;
+  align-content: $align-content;
+}
+
+@mixin grid-position($row: 1, $row-span: 1, $column: 1, $column-span: 1) {
+  grid-row: $row / span $row-span;
+  grid-column: $column / span $column-span;
+}
+
+@mixin overlay($color: $color-white, $opacity: 0.5, $blend-mode: screen) {
+  content: "";
+  @include size(100%, 100%);
+  background: $color;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  mix-blend-mode: $blend-mode;
+  opacity: $opacity;
+}
+
+@mixin hover-border() {
+  @include size(100%, 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: $border;
+  display: none;
+  z-index: $z-index-bottom;
+}
+
+@mixin media($breakpoint) {
+  @if $breakpoint == "4col-lg" {
+    @media (max-width: $screen-4col-lg) {
+      @content;
+    }
+  } @else if $breakpoint == "4col-md" {
+    @media (max-width: $screen-4col-md) {
+      @content;
+    }
+  } @else if $breakpoint == "4col-sm" {
+    @media (max-width: $screen-4col-sm) {
+      @content;
+    }
+  } @else if $breakpoint == "3col-lg" {
+    @media (max-width: $screen-3col-lg) {
+      @content;
+    }
+  } @else if $breakpoint == "3col-md" {
+    @media (max-width: $screen-3col-md) {
+      @content;
+    }
+  } @else if $breakpoint == "3col-sm" {
+    @media (max-width: $screen-3col-sm) {
+      @content;
+    }
+  } @else if $breakpoint == "2col-lg" {
+    @media (max-width: $screen-2col-lg) {
+      @content;
+    }
+  } @else if $breakpoint == "2col-md" {
+    @media (max-width: $screen-2col-md) {
+      @content;
+    }
+  } @else if $breakpoint == "2col-sm" {
+    @media (max-width: $screen-2col-sm) {
+      @content;
+    }
+  } @else if $breakpoint == "1col-lg" {
+    @media (max-width: $screen-1col-lg) {
+      @content;
+    }
+  } @else if $breakpoint == "1col-md" {
+    @media (max-width: $screen-1col-md) {
+      @content;
+    }
+  } @else if $breakpoint == "1col-sm" {
+    @media (max-width: $screen-1col-sm) {
+      @content;
+    }
+  } @else if $breakpoint == "1col-xs" {
+    @media (max-width: $screen-1col-xs) {
+      @content;
+    }
+  } @else if $breakpoint == "1col-xxs" {
+    @media (max-width: $screen-1col-xxs) {
+      @content;
+    }
+  } @else {
+    @media #{$breakpoint} {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "./variables.scss";
+
+::-webkit-scrollbar {
+  width: $size-sm;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-gray-normal;
+  border-left: $border;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $color-primary;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $color-gray-normal $color-white;
+}
+
+::-moz-selection {
+  color: $color-white;
+  background: $color-primary;
+}
+
+::selection {
+  color: $color-white;
+  background: $color-primary;
+}

@@ -1,0 +1,104 @@
+@import "@/index.scss";
+
+.sidebar {
+  @include flex(end, end, row);
+  @include size($size-sidebar, 100vh);
+  @include font($font-style-secondary, $font-size-sm);
+  @include colors($color-gray-light, $color-gray-normal);
+  position: fixed;
+  z-index: $z-index-sidebar;
+  transition: width $transition-normal ease;
+}
+
+.open {
+  width: calc($tile-4col + $size-sidebar);
+}
+
+.visible-content {
+  @include size($size-sidebar, 100%);
+  @include flex(center, center, row);
+  position: relative;
+}
+
+.text {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  user-select: none;
+  transform: rotate(-90deg);
+  transition: opacity $transition-normal;
+
+  &--open {
+    transition-delay: $transition-fast;
+    opacity: 0;
+  }
+
+  &--closed {
+    opacity: 1;
+  }
+}
+
+.btn {
+  @include size($size-sidebar, $size-sidebar);
+  @include flex(center, center);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.hidden-content {
+  @include size(100%, 100%);
+  position: absolute;
+  flex: 1;
+  transition: transform $transition-normal;
+
+  &--closed {
+    transform: translateX(-20rem);
+  }
+}
+
+@include media("3col-lg") {
+  .open {
+    width: calc($tile-3col + $size-sidebar);
+  }
+}
+
+@include media("2col-lg") {
+  .open {
+    width: calc($tile-2col + $size-sidebar);
+  }
+}
+
+@include media("2col-md") {
+  .sidebar,
+  .visible-content {
+    width: $size-sidebar-md;
+  }
+
+  .btn {
+    @include size($size-sidebar-md, $size-sidebar-md);
+  }
+  .open {
+    width: calc($tile-2col-md + $size-sidebar-md);
+  }
+}
+
+@include media("1col-lg") {
+  .open {
+    width: 100%;
+  }
+}
+
+@include media("1col-sm") {
+  .sidebar,
+  .visible-content {
+    width: $size-sidebar-sm;
+  }
+
+  .btn {
+    @include size($size-sidebar-sm, $size-sidebar-sm);
+  }
+  .open {
+    width: 100%;
+  }
+}

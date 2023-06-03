@@ -1,0 +1,15 @@
+@import "@/index.scss";
+
+.container {
+  @include flex(end, start, row, $size-sm);
+  @include size(100%, 100%);
+  position: relative;
+  flex: 1;
+}
+
+.item {
+  @include flex(center, center);
+  @include size(fit-content, fit-content);
+  cursor: grab;
+  z-index: $z-index-top;
+}

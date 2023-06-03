@@ -1,0 +1,23 @@
+{
+  "totalGrids": 8,
+  "totalGridsMd": 6,
+  "totalGridsSm": 4,
+  "totalGridsXs": 3,
+
+  "links": [
+    { "title": "About", "direction": "down", "id": "about-page" },
+    { "title": "Projects", "direction": "down", "id": "projects-page" },
+    { "title": "Contact", "direction": "down", "id": "contact-page" }
+  ],
+
+  "heading-big": "Front-End Developer",
+
+  "heading-small": "Tadas Šlajus",
+
+  "paragraph": "Hello, I'm Tadas, an aspiring front-end dev based in Kaunas, Lithuania.",
+
+  "redirects": [
+    { "icon": "linkedin", "linkUrl": "https://www.linkedin.com/in/tslajus/" },
+    { "icon": "github", "linkUrl": "https://github.com/tslajus" }
+  ]
+}
