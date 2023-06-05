@@ -12,6 +12,7 @@ import scratch11 from "@/assets/scratches/scratch_11.svg";
 import scratch12 from "@/assets/scratches/scratch_12.svg";
 import scratch13 from "@/assets/scratches/scratch_13.svg";
 import scratch14 from "@/assets/scratches/scratch_14.svg";
+import scratch15 from "@/assets/scratches/scratch_15.svg";
 
 import styles from "./Scratch.module.scss";
 
@@ -90,6 +91,10 @@ function Scratch({ scratch, className }: ScratchProps) {
 
     case 14:
       scratchSvg = scratch14;
+      break;
+
+    case 15:
+      scratchSvg = scratch15;
       break;
   }
 

@@ -3,6 +3,7 @@
 .navigation {
   @include grid-position(1, 1, 1, 2);
 }
+
 .movies-heading {
   @include grid-position(1, 1, 4, 1);
   h2 {

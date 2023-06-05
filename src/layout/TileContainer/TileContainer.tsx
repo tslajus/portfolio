@@ -12,6 +12,7 @@ type TileProps = {
   scratches?: Scratch[];
   isSquare?: boolean;
   isColumn?: boolean;
+  onClick?: () => void;
   className?: ClassName;
   id?: string;
 };
@@ -24,6 +25,7 @@ function TileContainer({
   scratches,
   isSquare = false,
   isColumn = false,
+  onClick,
   className,
   id,
 }: TileProps) {
@@ -39,7 +41,7 @@ function TileContainer({
   ].join(" ");
 
   return (
-    <Tag className={containerClassNames} id={id}>
+    <Tag className={containerClassNames} id={id} onClick={onClick}>
       {children}
       <div className={styles.hover} />
       {scratches &&

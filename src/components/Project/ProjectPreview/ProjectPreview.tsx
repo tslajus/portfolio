@@ -21,7 +21,7 @@ type ProjectPreviewProps = {
 };
 
 function ProjectPreview({
-  url = "",
+  url,
   img = "",
   hoverImg = "",
   alt = "",
@@ -62,6 +62,12 @@ function ProjectPreview({
     });
   }, [img, hoverImg]);
 
+  const handleClick = () => {
+    if (url) {
+      window.open(url, "_blank");
+    }
+  };
+
   const staticImg =
     imgLoaded && hoverImgLoaded ? (
       <a href={url} target="_blank" rel="noopener noreferrer">
@@ -86,9 +92,10 @@ function ProjectPreview({
       className={`${styles.container} ${
         styles[`container--${direction}`]
       } ${className}`}
+      onClick={handleClick}
     >
-      <div className={styles["hover-border"]} />
       {isStatic ? staticImg : dynamicImg}
+      <div className={styles["hover-border"]} />
     </TileContainer>
   );
 }

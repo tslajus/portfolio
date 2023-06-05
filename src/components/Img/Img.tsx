@@ -42,7 +42,6 @@ function Img({
       padding="none"
       className={`${styles.container} ${className}`}
     >
-      <div className={styles["hover-border"]} />
       {imgLoaded ? (
         <Tag
           href={url}
@@ -55,6 +54,7 @@ function Img({
       ) : (
         <Loader title={alt} />
       )}
+      <div className={styles["hover-border"]} />
     </TileContainer>
   );
 }

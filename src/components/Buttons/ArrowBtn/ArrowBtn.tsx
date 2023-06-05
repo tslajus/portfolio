@@ -10,7 +10,7 @@ type NavButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   isReversed?: boolean;
 };
 
-const NavButton = React.forwardRef<HTMLButtonElement, NavButtonProps>(
+const ArrowButton = React.forwardRef<HTMLButtonElement, NavButtonProps>(
   (props, ref) => {
     const {
       direction,
@@ -42,4 +42,4 @@ const NavButton = React.forwardRef<HTMLButtonElement, NavButtonProps>(
   }
 );
 
-export default NavButton;
+export default ArrowButton;

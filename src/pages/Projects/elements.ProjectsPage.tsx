@@ -22,7 +22,7 @@ function elements() {
   const { oneColRange, twoColRange, showNav, noElement } = useScreenSize();
 
   const [myMoviesApp, qualitrim, wordGuessingHaiku] = data.projects;
-  const { linkUrl: myMoviesAppUrl } = myMoviesApp.links[1];
+  const { linkUrl: myMoviesAppUrl } = myMoviesApp.links[2];
   const { linkUrl: qualitrimUrl } = qualitrim.links[1];
   const { linkUrl: haikuUrl } = wordGuessingHaiku.links[1];
 

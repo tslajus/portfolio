@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { keyGen, scrollToId } from "@/helpers";
 import { useNavigation } from "@/contexts/NavigationContext";
 import { ArrowBtn, TxtBtn } from "@/components";
@@ -8,6 +8,8 @@ import styles from "./Navigation.module.scss";
 function NavigationLinks({ links, type, isReversed = false }: NavLinks) {
   const linkButtonsRef = useRef<(HTMLButtonElement | null)[]>([]);
   const arrowButtonsRef = useRef<(HTMLButtonElement | null)[]>([]);
+
+  const [_, setHovered] = useState(false);
   const { hoveredIndex, setHoveredIndex } = useNavigation();
 
   const handleNavClick = (id: string) => {
@@ -15,11 +17,13 @@ function NavigationLinks({ links, type, isReversed = false }: NavLinks) {
   };
 
   const handleMouseEnter = (index: number) => {
+    setHovered(true);
     setHoveredIndex(index);
   };
 
   const handleMouseLeave = (_: number) => {
-    setHoveredIndex(null);
+    setHovered(false);
+    setHoveredIndex(-1);
   };
 
   const renderLinks = () => (
@@ -65,46 +69,46 @@ function NavigationLinks({ links, type, isReversed = false }: NavLinks) {
     </>
   );
 
-  const renderCombo = () => (
-    <>
-      {links.map((item, index) => (
-        <li key={keyGen()}>
-          <ArrowBtn
-            direction={item.direction}
-            ref={(el) => (arrowButtonsRef.current[index] = el)}
-            className={`${styles["arrow-btn"]} ${
-              styles[`arrow-btn--${item.direction}`]
-            } ${
-              isReversed &&
-              item.direction === "current" &&
-              styles["arrow-btn--reversed"]
-            } ${index === hoveredIndex && styles.hover}`}
-            onClick={() => handleNavClick(item.id)}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={() => handleMouseLeave(index)}
-            data-index={index}
-          />
-          <TxtBtn
-            isSelected={item.direction === "current"}
-            ref={(el) => (linkButtonsRef.current[index] = el)}
-            onClick={() => handleNavClick(item.id)}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={() => handleMouseLeave(index)}
-            data-index={index}
-            className={` ${styles.btn} ${
-              index === hoveredIndex ? styles.hover : ""
-            }`}
-          >
-            {item.title}
-          </TxtBtn>
-        </li>
-      ))}
-    </>
-  );
+  // const renderCombo = () => (
+  //   <>
+  //     {links.map((item, index) => (
+  //       <li key={keyGen()}>
+  //         <ArrowBtn
+  //           direction={item.direction}
+  //           ref={(el) => (arrowButtonsRef.current[index] = el)}
+  //           className={`${styles["arrow-btn"]} ${
+  //             styles[`arrow-btn--${item.direction}`]
+  //           } ${
+  //             isReversed &&
+  //             item.direction === "current" &&
+  //             styles["arrow-btn--reversed"]
+  //           } ${index === hoveredIndex && styles.hover}`}
+  //           onClick={() => handleNavClick(item.id)}
+  //           onMouseEnter={() => handleMouseEnter(index)}
+  //           onMouseLeave={() => handleMouseLeave(index)}
+  //           data-index={index}
+  //         />
+  //         <TxtBtn
+  //           isSelected={item.direction === "current"}
+  //           ref={(el) => (linkButtonsRef.current[index] = el)}
+  //           onClick={() => handleNavClick(item.id)}
+  //           onMouseEnter={() => handleMouseEnter(index)}
+  //           onMouseLeave={() => handleMouseLeave(index)}
+  //           data-index={index}
+  //           className={` ${styles.btn} ${
+  //             index === hoveredIndex ? styles.hover : ""
+  //           }`}
+  //         >
+  //           {item.title}
+  //         </TxtBtn>
+  //       </li>
+  //     ))}
+  //   </>
+  // );
 
   if (type === "links") return renderLinks();
   else if (type === "arrows") return renderArrows();
-  else if (type === "combo") return renderCombo();
+  // else if (type === "combo") return renderCombo();
   else return null;
 }
 

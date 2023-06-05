@@ -38,6 +38,7 @@
 .header-img {
   width: 40%;
   position: relative;
+  filter: grayscale(100%);
 
   &::after {
     @include overlay();
@@ -78,11 +79,12 @@
 }
 
 .contacts-scratch {
-  transform: translateY(-50%);
+  transform: translate(-5rem, -50%);
 }
 
 .email {
-  @include font($font-style-primary, $font-size-md);
+  @include font($font-style-secondary, $font-size-sm);
+  color: $color-gray-dark;
 
   &:hover {
     color: $color-primary;

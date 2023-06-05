@@ -8,7 +8,7 @@ function generateEmptyTiles(totalGridCount: number, gridSizes: number[]) {
 
   const emptyTiles = [];
   for (let i = 0; i < emptyCount; i++) {
-    emptyTiles.push(<TileContainer isSquare doesChangeColor key={keyGen()} />);
+    emptyTiles.push(<TileContainer isSquare key={keyGen()} />);
   }
   return emptyTiles;
 }

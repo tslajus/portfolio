@@ -74,6 +74,8 @@ button {
   cursor: pointer;
   background: none;
   border: none;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 @include media("1col-lg") {

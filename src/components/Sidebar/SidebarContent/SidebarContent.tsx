@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 import data from "./data.SidebarContent.json";
 import { scrollToId } from "@/helpers";
 import { TxtBtn, IconLinks, Scratch } from "@/components";
-import ProfilePic from "@/assets/tslajus.png";
+import ProfilePic from "@/assets/tslajus2.jpg";
 
 import styles from "./SidebarContent.module.scss";
 
