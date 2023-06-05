@@ -101,3 +101,16 @@
     color: $color-gray-dark;
   }
 }
+
+@include media("1col-lg") {
+  .contacts {
+    justify-content: center;
+    span {
+      display: none;
+    }
+  }
+
+  .contacts-scratch {
+    transform: translate(50%, -50%);
+  }
+}

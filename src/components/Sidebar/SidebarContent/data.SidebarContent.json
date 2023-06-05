@@ -28,5 +28,14 @@
       "width": "fit-content",
       "height": "fit-content"
     }
+  },
+  "contactsScratchMobile": {
+    "variation": 14,
+    "position": {
+      "top": "50%",
+      "right": "50%",
+      "width": "fit-content",
+      "height": "fit-content"
+    }
   }
 }

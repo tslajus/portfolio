@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import data from "./data.SidebarContent.json";
+import { useScreenSize } from "@/hooks";
 import { scrollToId } from "@/helpers";
 import { TxtBtn, IconLinks, Scratch } from "@/components";
 import ProfilePic from "@/assets/tslajus2.jpg";
@@ -12,6 +13,8 @@ type SidebarContentProps = {
 };
 
 function SidebarContent({ isOpen, setIsOpen }: SidebarContentProps) {
+  const { oneColRange } = useScreenSize();
+
   const handleClickProjects = () => {
     scrollToId("projects-page");
     setIsOpen(false);
@@ -58,7 +61,9 @@ function SidebarContent({ isOpen, setIsOpen }: SidebarContentProps) {
       </a>
       <Scratch
         className={styles["contacts-scratch"]}
-        scratch={data.contactsScratch}
+        scratch={
+          oneColRange ? data.contactsScratchMobile : data.contactsScratch
+        }
       />
     </div>
   );
