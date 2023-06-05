@@ -19,8 +19,6 @@ function Img({
   noHover = false,
   className = "",
 }: ImgProps) {
-  const Tag = url ? "a" : "div";
-
   const [imgLoaded, setImgLoaded] = useState(false);
 
   useEffect(() => {
@@ -37,20 +35,22 @@ function Img({
     });
   }, [src]);
 
+  const handleClick = () => {
+    if (url) {
+      window.open(url, "_blank");
+    }
+  };
+
   return (
     <TileContainer
       padding="none"
       className={`${styles.container} ${className}`}
+      onClick={handleClick}
     >
       {imgLoaded ? (
-        <Tag
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${styles.img} ${noHover && styles["no-hover"]}`}
-        >
+        <div className={`${styles.img} ${noHover && styles["no-hover"]}`}>
           <img src={src} alt={alt} />
-        </Tag>
+        </div>
       ) : (
         <Loader title={alt} />
       )}

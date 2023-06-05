@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { keyGen, scrollToId } from "@/helpers";
 import { useNavigation } from "@/contexts/NavigationContext";
 import { ArrowBtn, TxtBtn } from "@/components";
@@ -10,17 +10,22 @@ function NavigationLinks({ links, type, isReversed = false }: NavLinks) {
   const arrowButtonsRef = useRef<(HTMLButtonElement | null)[]>([]);
 
   const { hoveredIndex, setHoveredIndex } = useNavigation();
+  const [_, setHovered] = useState(-1);
 
   const handleNavClick = (id: string) => {
     scrollToId(id);
   };
 
   const handleMouseEnter = (index: number) => {
+    setHovered(index);
     setHoveredIndex(index);
   };
 
   const handleMouseLeave = (_: number) => {
-    setHoveredIndex(-1);
+    setTimeout(() => {
+      setHovered(-1);
+      setHoveredIndex(-1);
+    }, 0);
   };
 
   const renderLinks = () => (
@@ -92,7 +97,7 @@ function NavigationLinks({ links, type, isReversed = false }: NavLinks) {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
             data-index={index}
-            className={` ${styles.btn} ${
+            className={`${styles.btn} ${
               index === hoveredIndex ? styles.hover : ""
             }`}
           >
