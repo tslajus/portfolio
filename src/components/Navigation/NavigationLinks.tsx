@@ -25,7 +25,7 @@ function NavigationLinks({ links, type, isReversed = false }: NavLinks) {
     setTimeout(() => {
       setHovered(-1);
       setHoveredIndex(-1);
-    }, 0);
+    }, 50);
   };
 
   const renderLinks = () => (
