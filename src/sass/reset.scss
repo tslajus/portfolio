@@ -61,6 +61,7 @@ body {
   font-family: $font-style-secondary;
   font-size: $font-size-sm;
   line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
