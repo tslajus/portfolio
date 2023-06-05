@@ -3,6 +3,7 @@
 .sidebar {
   @include flex(end, end, row);
   @include size($size-sidebar, 100vh);
+  @include size($size-sidebar, 100dvh);
   @include font($font-style-secondary, $font-size-sm);
   @include colors($color-gray-light, $color-gray-normal);
   position: fixed;
