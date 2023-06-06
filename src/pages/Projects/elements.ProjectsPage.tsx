@@ -12,8 +12,8 @@ import MoviesAppImg from "@/assets/mymoviesapp.jpg";
 import MoviesAppImgSm from "@/assets/mymoviesapp_small.jpg";
 import QualitrimImg from "@/assets/qualitrim.jpg";
 import QualitrimImgSm from "@/assets/qualitrim_small2.jpg";
-import HaikuImg1 from "@/assets/haiku1.png";
-import HaikuImg2 from "@/assets/haiku2.png";
+import HaikuImg1 from "@/assets/haiku1.jpg";
+import HaikuImg2 from "@/assets/haiku2.jpg";
 import HaikuImgSm from "@/assets/haiku_small.jpg";
 
 import styles from "./ProjectsPage.module.scss";

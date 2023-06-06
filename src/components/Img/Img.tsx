@@ -44,7 +44,7 @@ function Img({
   return (
     <TileContainer
       padding="none"
-      className={`${styles.container} ${className}`}
+      className={`${styles.container} ${url && styles.cursor} ${className}`}
       onClick={handleClick}
     >
       {imgLoaded ? (
