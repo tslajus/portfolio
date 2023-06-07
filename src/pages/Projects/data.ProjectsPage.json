@@ -27,7 +27,7 @@
           "linkUrl": "https://github.com/tslajus/movies-app_backend",
           "linkComment": "back-end"
         },
-        { "icon": "preview", "linkUrl": "https://my-movies-app.onrender.com/" }
+        { "icon": "preview", "linkUrl": "https://movies.slajus.dev" }
       ],
       "icons": ["react", "ts", "sass", "mongo", "node"],
 
@@ -64,7 +64,7 @@
           "icon": "github",
           "linkUrl": "https://github.com/tslajus/qualitrim"
         },
-        { "icon": "preview", "linkUrl": "https://qualitrim.netlify.app/" }
+        { "icon": "preview", "linkUrl": "https://qualitrim.slajus.dev" }
       ],
       "icons": ["react", "ts", "sass"],
       "scratch": [
@@ -112,7 +112,7 @@
         },
         {
           "icon": "preview",
-          "linkUrl": "https://word-guessing-haiku.onrender.com/"
+          "linkUrl": "https://haiku.slajus.dev"
         }
       ],
       "icons": ["react", "ts", "sass", "openai"],
