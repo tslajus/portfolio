@@ -71,14 +71,7 @@
   }
 }
 
-@include media("1col-xs") {
-  .heading--big {
-    font-size: calc(16vw + 1rem);
-    transform: translateY(-10%);
-  }
-}
-
-@include media("1col-xxs") {
+@include media("1col-lg") {
   .heading--big {
     transform: translateY(-15%);
   }
