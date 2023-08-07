@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const servers = [process.env.HAIKU_APP_HEALTH_URL || ""].filter(Boolean);
+const servers = [import.meta.env.VITE_HAIKU_APP_HEALTH_URL || ""].filter(
+  Boolean
+);
 
 const wakeUpServers = async () => {
   try {
