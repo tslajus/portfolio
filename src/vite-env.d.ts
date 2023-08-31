@@ -47,7 +47,6 @@ type Padding = "normal" | "big" | "none";
 type ProjectData = {
   title: string;
   description: string;
-  descriptionShort: string;
   links: Link[];
   icons: string[];
 };

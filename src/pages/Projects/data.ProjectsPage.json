@@ -1,8 +1,8 @@
 {
-  "totalGrids": 32,
-  "totalGridsMd": 24,
-  "totalGridsSm": 14,
-  "totalGridsXs": 10,
+  "totalGrids": 40,
+  "totalGridsMd": 30,
+  "totalGridsSm": 18,
+  "totalGridsXs": 13,
 
   "links": [
     { "title": "Projects", "direction": "current", "id": "projects-page" }
@@ -14,8 +14,7 @@
   "projects": [
     {
       "title": "My Movies App",
-      "description": "A full-stack app offering movie search functionality, comprehensive movie info, and favorites storage. ",
-      "descriptionShort": "Car rental website is a platform that allows users to rent cars for personal or business use.",
+      "description": "A full-stack app offering movie search functionality, comprehensive movie info, and favorites storage.",
       "links": [
         {
           "icon": "github",
@@ -56,23 +55,28 @@
     },
 
     {
-      "title": "Qualitrim",
-      "description": "A stylish and functional landing page conveying the unique atmosphere of a barber shop. ",
-      "descriptionShort": "Car rental website is a platform that allows users to rent cars for personal or business use.",
+      "title": "Queue Management System",
+      "description": "A prototype system for visit registration and management.",
       "links": [
         {
           "icon": "github",
-          "linkUrl": "https://github.com/tslajus/qualitrim"
+          "linkUrl": "https://github.com/tslajus/qms_ui",
+          "linkComment": "front-end"
         },
-        { "icon": "preview", "linkUrl": "https://qualitrim.slajus.dev" }
+        {
+          "icon": "github",
+          "linkUrl": "https://github.com/tslajus/qms-api",
+          "linkComment": "back-end"
+        },
+        { "icon": "preview", "linkUrl": "https://qms.slajus.dev" }
       ],
-      "icons": ["react", "ts", "sass"],
+      "icons": ["react", "ts", "sass", "mongo", "node"],
       "scratch": [
         {
           "variation": 5,
           "position": {
             "top": "-15rem",
-            "left": "6rem",
+            "right": "6rem",
             "width": "340%",
             "height": "340%"
           }
@@ -101,10 +105,10 @@
         }
       ]
     },
+
     {
       "title": "Word Guessing Haiku",
       "description": "An engaging AI-powered word guessing game, delivering clues in the form of unique haiku. ",
-      "descriptionShort": "Car rental website is a platform that allows users to rent cars for personal or business use.",
       "links": [
         {
           "icon": "github",
@@ -167,6 +171,51 @@
             "left": "-5rem",
             "width": "300%",
             "height": "300%"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Qualitrim",
+      "description": "A stylish and functional landing page conveying the unique atmosphere of a barber shop. ",
+      "links": [
+        {
+          "icon": "github",
+          "linkUrl": "https://github.com/tslajus/qualitrim"
+        },
+        { "icon": "preview", "linkUrl": "https://qualitrim.slajus.dev" }
+      ],
+      "icons": ["react", "ts", "sass"],
+      "scratch": [
+        {
+          "variation": 12,
+          "position": {
+            "top": "-15rem",
+            "left": "10rem",
+            "width": "100%",
+            "height": "100%"
+          }
+        }
+      ],
+      "scratch2Col": [
+        {
+          "variation": 4,
+          "position": {
+            "top": "-25rem",
+            "left": "-5rem",
+            "width": "220%",
+            "height": "220%"
+          }
+        }
+      ],
+      "scratch1Col": [
+        {
+          "variation": 4,
+          "position": {
+            "top": "-60rem",
+            "left": "-10rem",
+            "width": "340%",
+            "height": "340%"
           }
         }
       ]

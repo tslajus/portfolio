@@ -18,29 +18,41 @@
   @include grid-position(2, 1, 4, 1);
 }
 
+.qms-heading {
+  @include grid-position(3, 1, 3, 1);
+}
+
+.qms-preview {
+  @include grid-position(4, 1, 1, 2);
+}
+
+.qms-info {
+  @include grid-position(4, 1, 3, 1);
+}
+
 .haiku-heading {
-  @include grid-position(4, 1, 2, 1);
+  @include grid-position(6, 1, 2, 1);
   text-align: end;
 }
 
 .haiku-preview {
-  @include grid-position(4, 2, 3, 1);
+  @include grid-position(6, 2, 3, 1);
 }
 
 .haiku-info {
-  @include grid-position(5, 1, 2, 1);
+  @include grid-position(7, 1, 2, 1);
 }
 
 .qualitrim-heading {
-  @include grid-position(6, 1, 1, 1);
+  @include grid-position(8, 1, 1, 1);
 }
 
 .qualitrim-preview {
-  @include grid-position(7, 1, 2, 2);
+  @include grid-position(9, 1, 2, 2);
 }
 
 .qualitrim-info {
-  @include grid-position(7, 1, 1, 1);
+  @include grid-position(9, 1, 1, 1);
 }
 
 @include media("4col-md") {
@@ -72,28 +84,40 @@
     @include grid-position(2, 1, 3, 1);
   }
 
-  .haiku-heading {
+  .qms-heading {
+    @include grid-position(3, 1, 1, 1);
+  }
+
+  .qms-preview {
+    @include grid-position(4, 1, 2, 2);
+  }
+
+  .qms-info {
     @include grid-position(4, 1, 1, 1);
   }
 
-  .haiku-preview {
-    @include grid-position(4, 2, 2, 1);
-  }
-
-  .haiku-info {
-    @include grid-position(5, 1, 1, 1);
-  }
-
-  .qualitrim-heading {
+  .haiku-heading {
     @include grid-position(6, 1, 1, 1);
   }
 
+  .haiku-preview {
+    @include grid-position(6, 2, 2, 1);
+  }
+
+  .haiku-info {
+    @include grid-position(7, 1, 1, 1);
+  }
+
+  .qualitrim-heading {
+    @include grid-position(8, 1, 3, 1);
+  }
+
   .qualitrim-preview {
-    @include grid-position(7, 1, 2, 2);
+    @include grid-position(9, 1, 1, 2);
   }
 
   .qualitrim-info {
-    @include grid-position(7, 1, 1, 1);
+    @include grid-position(9, 1, 3, 1);
   }
 }
 
@@ -126,30 +150,46 @@
     @include grid-position(3, 1, 2, 1);
   }
 
-  .haiku-heading {
-    @include grid-position(4, 1, 1, 1);
-  }
-
-  .haiku-info {
-    @include grid-position(5, 1, 1, 1);
-  }
-
-  .haiku-preview {
+  .qms-preview {
     @include grid-position(5, 1, 2, 1);
     aspect-ratio: 1;
   }
 
-  .qualitrim-preview {
+  .qms-heading {
+    @include grid-position(4, 1, 1, 1);
+  }
+
+  .qms-info {
+    @include grid-position(5, 1, 1, 1);
+  }
+
+  .haiku-heading {
+    @include grid-position(6, 1, 2, 1);
+    h2 {
+      text-align: start;
+    }
+  }
+
+  .haiku-info {
+    @include grid-position(7, 1, 2, 1);
+  }
+
+  .haiku-preview {
     @include grid-position(7, 1, 1, 1);
     aspect-ratio: 1;
   }
 
+  .qualitrim-preview {
+    @include grid-position(9, 1, 2, 1);
+    aspect-ratio: 1;
+  }
+
   .qualitrim-heading {
-    @include grid-position(6, 1, 2, 1);
+    @include grid-position(8, 1, 1, 1);
   }
 
   .qualitrim-info {
-    @include grid-position(7, 1, 2, 1);
+    @include grid-position(9, 1, 1, 1);
   }
 }
 
@@ -175,33 +215,43 @@
     @include grid-position(4, 1, 1, 1);
   }
 
-  .haiku-heading {
+  .qms-heading {
     @include grid-position(5, 1, 1, 1);
     padding: $size-xl;
-    h2 {
-      text-align: start;
-    }
   }
 
-  .haiku-preview {
+  .qms-preview {
     @include grid-position(6, 1, 1, 1);
   }
 
-  .haiku-info {
+  .qms-info {
     @include grid-position(7, 1, 1, 1);
   }
 
-  .qualitrim-heading {
+  .haiku-heading {
     @include grid-position(8, 1, 1, 1);
     padding: $size-xl;
   }
 
-  .qualitrim-preview {
+  .haiku-preview {
     @include grid-position(9, 1, 1, 1);
   }
 
-  .qualitrim-info {
+  .haiku-info {
     @include grid-position(10, 1, 1, 1);
+  }
+
+  .qualitrim-heading {
+    @include grid-position(11, 1, 1, 1);
+    padding: $size-xl;
+  }
+
+  .qualitrim-preview {
+    @include grid-position(12, 1, 1, 1);
+  }
+
+  .qualitrim-info {
+    @include grid-position(13, 1, 1, 1);
   }
 }
 

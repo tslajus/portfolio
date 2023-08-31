@@ -15,36 +15,51 @@ import QualitrimImgSm from "@/assets/qualitrim_small2.jpg";
 import HaikuImg1 from "@/assets/haiku1.jpg";
 import HaikuImg2 from "@/assets/haiku2.jpg";
 import HaikuImgSm from "@/assets/haiku_small.jpg";
+import QmsImg1 from "@/assets/qms1.jpg";
+import QmsImg2 from "@/assets/qms2.jpg";
+import QmsImgSm from "@/assets/qms_small.jpg";
 
 import styles from "./ProjectsPage.module.scss";
 
 function elements() {
-  const { oneColRange, twoColRange, showNav, noElement } = useScreenSize();
+  const {
+    oneColRange,
+    twoColRange,
+    threeColRange,
+    fourColRange,
+    showNav,
+    noElement,
+  } = useScreenSize();
 
-  const [myMoviesApp, qualitrim, wordGuessingHaiku] = data.projects;
+  const [myMoviesApp, qms, wordGuessingHaiku, qualitrim] = data.projects;
   const { linkUrl: myMoviesAppUrl } = myMoviesApp.links[2];
-  const { linkUrl: qualitrimUrl } = qualitrim.links[1];
+  const { linkUrl: qmsUrl } = qms.links[2];
   const { linkUrl: haikuUrl } = wordGuessingHaiku.links[1];
+  const { linkUrl: qualitrimUrl } = qualitrim.links[1];
 
   let moviesScratches;
+  let qmsScratches;
   let haikuScratches;
   let qualitrimScratches;
 
   switch (true) {
     case twoColRange:
       moviesScratches = myMoviesApp.scratch;
+      qmsScratches = qms.scratch2Col;
       haikuScratches = wordGuessingHaiku.scratch2Col;
       qualitrimScratches = qualitrim.scratch2Col;
       break;
 
     case oneColRange:
       moviesScratches = myMoviesApp.scratch1Col;
+      qmsScratches = qms.scratch1Col;
       haikuScratches = wordGuessingHaiku.scratch1Col;
       qualitrimScratches = qualitrim.scratch1Col;
       break;
 
     default:
       moviesScratches = myMoviesApp.scratch;
+      qmsScratches = qms.scratch;
       haikuScratches = wordGuessingHaiku.scratch;
       qualitrimScratches = qualitrim.scratch;
   }
@@ -83,6 +98,7 @@ function elements() {
         }
       : noElement(),
 
+    /////My Movies App
     {
       element: (
         <ProjectInfo
@@ -135,12 +151,66 @@ function elements() {
       gridSize: twoColRange || oneColRange ? 1 : 2,
     },
 
+    /////Queue Management System
+    {
+      element: (
+        <HeadingBlock
+          heading={qms.title}
+          size="small"
+          align={threeColRange || twoColRange ? "end" : "start"}
+          className={styles["qms-heading"]}
+          id="qms"
+          key={keyGen()}
+        />
+      ),
+      gridSize: 1,
+    },
+
+    {
+      element: (
+        <ProjectInfo
+          data={qms as ProjectData}
+          scratches={qmsScratches}
+          isRight={threeColRange || twoColRange}
+          className={styles["qms-info"]}
+          key={keyGen()}
+        />
+      ),
+      gridSize: 1,
+    },
+
+    {
+      element:
+        twoColRange || oneColRange ? (
+          <Img
+            src={QmsImgSm}
+            alt={qms.title}
+            url={qmsUrl}
+            className={styles["qms-preview"]}
+            key={keyGen()}
+          />
+        ) : (
+          <ProjectPreview
+            img={QmsImg1}
+            hoverImg={QmsImg2}
+            alt={qms.title}
+            url={qmsUrl}
+            title={qms.title}
+            className={styles["qms-preview"]}
+            isStatic
+            key={keyGen()}
+          />
+        ),
+      gridSize: twoColRange || oneColRange ? 1 : 2,
+    },
+
+    /////Word Guessing Haiku
     {
       element: (
         <HeadingBlock
           heading={splitTextWithBreaks(wordGuessingHaiku.title)}
           size="small"
-          align={oneColRange ? "start" : "end"}
+          align={fourColRange || threeColRange ? "end" : "start"}
           className={styles["haiku-heading"]}
           id="word-guessing-haiku"
           key={keyGen()}
@@ -155,7 +225,7 @@ function elements() {
           data={wordGuessingHaiku as ProjectData}
           scratches={haikuScratches}
           className={styles["haiku-info"]}
-          isRight={!oneColRange}
+          isRight={!twoColRange}
           key={keyGen()}
         />
       ),
@@ -188,12 +258,13 @@ function elements() {
       gridSize: twoColRange || oneColRange ? 1 : 2,
     },
 
+    /////Qualitrim
     {
       element: (
         <HeadingBlock
           heading={qualitrim.title}
           size="small"
-          align={twoColRange || oneColRange ? "start" : "end"}
+          align={fourColRange || twoColRange ? "end" : "start"}
           className={styles["qualitrim-heading"]}
           id="qualitrim"
           key={keyGen()}
@@ -207,7 +278,7 @@ function elements() {
         <ProjectInfo
           data={qualitrim as ProjectData}
           scratches={qualitrimScratches}
-          isRight={!twoColRange && !oneColRange}
+          isRight={fourColRange || twoColRange}
           className={styles["qualitrim-info"]}
           key={keyGen()}
         />
