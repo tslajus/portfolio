@@ -68,7 +68,7 @@
           "linkUrl": "https://github.com/tslajus/qms-api",
           "linkComment": "back-end"
         },
-        { "icon": "preview", "linkUrl": "https://qms.slajus.dev" }
+        { "icon": "preview", "linkUrl": "https://qms-ui.netlify.app" }
       ],
       "icons": ["react", "ts", "sass", "mongo", "node"],
       "scratch": [
@@ -116,7 +116,7 @@
         },
         {
           "icon": "preview",
-          "linkUrl": "https://haiku.slajus.dev"
+          "linkUrl": "https://word-guessing-haiku.netlify.app"
         }
       ],
       "icons": ["react", "ts", "sass", "openai"],
