@@ -26,7 +26,7 @@
           "linkUrl": "https://github.com/tslajus/movies-app_backend",
           "linkComment": "back-end"
         },
-        { "icon": "preview", "linkUrl": "https://movies.slajus.dev" }
+        { "icon": "preview", "linkUrl": "https://my-movies-app.onrender.com" }
       ],
       "icons": ["react", "ts", "sass", "mongo", "node"],
 
